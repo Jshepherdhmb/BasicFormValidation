@@ -2,7 +2,8 @@ function validate(){
   //Grab the user's input and store in variables
   var userEntered = document.getElementById("user").value;
   var passEntered = document.getElementById("pass").value;
-
+console.log(userEntered.length);
+console.log(passEntered.length);
 if(userEntered.length < 6){
 
   //Show message that there is an error with the username...
@@ -12,7 +13,7 @@ if(userEntered.length < 6){
   //Turn the username items red
  	document.getElementById("usernameGroup").classList.add("has-error");
 }else if (userEntered.length >= 6){
-
+console.log("success");
  //Turn the username items to green
 	document.getElementById("usernameGroup").classList.add("has-success");
 }
@@ -26,7 +27,7 @@ if (passEntered.length < 6 || passEntered == "password") {
 }
 else if (passEntered.length >= 6 && passEntered != "password"){
   //Turn the password items green
-
+	console.log("success");
  	 document.getElementById("passwordGroup").classList.add("has-success");
 }
 }
